@@ -1,0 +1,61 @@
+from ultralytics import YOLO
+import cv2
+
+model = YOLO('yolov8n.pt')  # 'n' is the "nano" version - small and fast
+
+
+source_image = '/Users/kaitobremner/Desktop/Studies/Y3/3YP/Drone_software/Police-Array-Drone-System-/Image_examples/alexandra-tandy-photography-touching-a-sign.jpg'
+
+# The 'source' can also be a video file: 'path/to/test_video.mp4'
+results = model(source_image)
+
+# Load the image with OpenCV to draw on it
+frame = cv2.imread(source_image)
+
+CLASS_MAP = {
+    0: {'label': 'Person', 'color': (0, 0, 255)},  # Red
+    2: {'label': 'Car', 'color': (255, 0, 0)}     # Blue
+}
+
+# Loop through all the detections in the results
+for result in results:
+    # Get the bounding boxes for all detected objects
+    boxes = result.boxes
+    
+    for box in boxes:
+        # Get the coordinates (x1, y1, x2, y2)
+        x1, y1, x2, y2 = box.xyxy[0]
+        x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
+        
+        # Get the class ID and confidence score
+        cls_id = int(box.cls[0])
+        confidence = float(box.conf[0])
+        
+        #'person' class (ID is 0 in COCO)
+        if cls_id in CLASS_MAP and confidence > 0.5:
+            
+            # Get the specific details for this class
+            details = CLASS_MAP[cls_id]
+            label = details['label']
+            color = details['color']
+            
+            # Get the coordinates
+            x1, y1, x2, y2 = box.xyxy[0]
+            x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
+            
+            # Draw the rectangle with the specific color
+            cv2.rectangle(frame, (x1, y1), (x2, y2), color, 2)
+            
+            # Add the label with the specific color
+            text = f"{label}: {confidence:.2f}"
+            cv2.putText(frame, text, (x1, y1 - 10), 
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
+
+# Save or display the final image
+cv2.imwrite('annotated_people_street.jpg', frame)
+print("Detection complete. Check 'output_image.jpg'.")
+
+# To display in a window (press 'q' to quit)
+cv2.imshow("YOLO Detection", frame)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
