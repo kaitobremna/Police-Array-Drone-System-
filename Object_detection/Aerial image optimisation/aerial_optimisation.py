@@ -21,6 +21,6 @@ model = model.load("yolov8n.pt")
 #     copy_paste=0.3,        # 30% copy-paste: Great for small object instance learning
 #     degrees=0.0,           # Disable rotation (drones usually stay level)
 #     name="yolov8n_p2_visdrone"
-# )
+# )Code
 
 results = model.train(data="VisDrone.yaml")  # Standard VisDrone dataset config

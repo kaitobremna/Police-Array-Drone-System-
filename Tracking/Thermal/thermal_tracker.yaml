@@ -1,0 +1,17 @@
+# Custom BoT-SORT tracker configuration for drone tracking
+ 
+tracker_type: botsort     # (str) Tracker backend: botsort|bytetrack; choose botsort to enable BoT-SORT features
+track_high_thresh: 0.4    # (float) First-stage match threshold; raise for cleaner tracks, lower to keep more
+track_low_thresh: 0.1     # (float) Second-stage threshold for low-score matches; balances recovery vs drift
+new_track_thresh: 0.4     # (float) Start a new track if no match ≥ this; higher reduces false tracks
+track_buffer: 60          # (int) Frames to keep lost tracks alive; higher handles occlusion, increases ID switches risk
+match_thresh: 0.7         # (float) Association similarity threshold (IoU/cost); tune with detector quality
+fuse_score: True          # (bool) Fuse detection score with motion/IoU for matching; stabilizes weak detections
+
+# BoT-SORT specifics
+gmc_method: sparseOptFlow # (str) Global motion compensation: sparseOptFlow|orb|none; helps moving camera scenes
+
+# ReID model related thresh
+with_reid: False          # (bool) Disable ReID model use; difficult with Thermal Images
+proximity_thresh: 0.5     # Dummy value (required by code)
+appearance_thresh: 0.25   # Dummy value (required by code)
