@@ -1,0 +1,14 @@
+{
+    "packet_id": 1770564903117,
+    "timestamp": 1770564903.117733,
+    "target_id": 1,
+    "prediction": {
+        "horizon_frames": 4,
+        "screen_x": 0.2995,
+        "screen_y": 0.271
+    },
+    "control_vector": {
+        "yaw": -0.2005,
+        "pitch": 0.229
+    }
+}

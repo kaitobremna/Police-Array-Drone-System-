@@ -1,0 +1,51 @@
+{
+    "packet_id": 1770722611556,
+    "timestamp_readable": "2026-02-10 11:23:31 GMT",
+    "target_id": 1,
+    "box_size": {
+        "w": 0.0132,
+        "h": 0.0595
+    },
+    "trajectory_commands": [
+        {
+            "step": 1,
+            "time_offset": "+100ms",
+            "x": 0.2631,
+            "y": 0.3201,
+            "yaw_cmd": -0.2369,
+            "pitch_cmd": 0.1799
+        },
+        {
+            "step": 2,
+            "time_offset": "+200ms",
+            "x": 0.2632,
+            "y": 0.3188,
+            "yaw_cmd": -0.2368,
+            "pitch_cmd": 0.1812
+        },
+        {
+            "step": 3,
+            "time_offset": "+300ms",
+            "x": 0.2635,
+            "y": 0.3175,
+            "yaw_cmd": -0.2365,
+            "pitch_cmd": 0.1825
+        },
+        {
+            "step": 4,
+            "time_offset": "+400ms",
+            "x": 0.2639,
+            "y": 0.316,
+            "yaw_cmd": -0.2361,
+            "pitch_cmd": 0.184
+        },
+        {
+            "step": 5,
+            "time_offset": "+500ms",
+            "x": 0.2645,
+            "y": 0.3144,
+            "yaw_cmd": -0.2355,
+            "pitch_cmd": 0.1856
+        }
+    ]
+}

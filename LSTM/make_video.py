@@ -16,7 +16,7 @@ ANNOTATION_FILE = "/Users/kaitobremner/Desktop/Studies/Y3/3YP/Drone_software/Pol
 
 # Path to your trained model
 MODEL_PATH = "/Users/kaitobremner/Desktop/Studies/Y3/3YP/Drone_software/Police-Array-Drone-System-/LSTM/epoch_10.pth" 
-OUTPUT_VIDEO = "/Users/kaitobremner/Desktop/Studies/Y3/3YP/Drone_software/Police-Array-Drone-System-/runs/predict/person14_prediction.mp4"
+OUTPUT_VIDEO = "/Users/kaitobremner/Desktop/Studies/Y3/3YP/Drone_software/Police-Array-Drone-System-/runs/predict/person14_prediction_demo.mp4"
 
 # ==========================================
 # 2. MODEL DEFINITION (Must match training)

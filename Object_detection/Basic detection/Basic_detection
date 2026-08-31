@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 import cv2
 
-model = YOLO('yolov8n.pt')  # 'n' is the "nano" version - small and fast
+model = YOLO('/Users/kaitobremner/Desktop/Studies/Y3/3YP/Drone_software/Police-Array-Drone-System-/Object_detection/Aerial image optimisation/YOLOv26n/yolo26n.pt')  # 'n' is the "nano" version - small and fast
 
 
 source_image = '/Users/kaitobremner/Desktop/Studies/Y3/3YP/Drone_software/Police-Array-Drone-System-/Image_examples/alexandra-tandy-photography-touching-a-sign.jpg'

@@ -2,7 +2,7 @@ from ultralytics import YOLO
 import os
 
 # 1. Load the normal, pre-trained model
-model = YOLO('yolov8n.pt') 
+model = YOLO('/Users/kaitobremner/Desktop/Studies/Y3/3YP/Drone_software/Police-Array-Drone-System-/Object_detection/Aerial image optimisation/YOLOv26n/yolo26n.pt') 
 
 # 2. Run Inference (Not Validation)
 # We use 'predict' to see what the model "sees", ignoring the class mismatch errors.
@@ -13,7 +13,7 @@ print("📸 Taking snapshots with standard model...")
 # Note: We point to the dataset folder that was downloaded earlier
 # Adjust this path if your dataset is elsewhere (e.g. /content/datasets/VisDrone/...)
 results = model.predict(
-    source='/Users/kaitobremner/Desktop/Studies/Y3/3YP/Drone_software/Police-Array-Drone-System-/Visdrone sample images', 
+    source='/Users/kaitobremner/Desktop/Studies/Y3/3YP/Drone_software/Police-Array-Drone-System-/Object_detection/Aerial image optimisation/Visdrone sample images', 
     conf=0.25, 
     save=True, 
     imgsz=640,  # Standard size (shows why resizing hurts small objects)

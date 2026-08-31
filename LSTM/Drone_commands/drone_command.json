@@ -1,0 +1,44 @@
+{
+    "packet_id": 1770566345782,
+    "timestamp_generated": 1770566345.782709,
+    "target_id": 2,
+    "status": "LOCKED",
+    "current_box": {
+        "width": 0.0203,
+        "height": 0.038
+    },
+    "trajectory": [
+        {
+            "step": 1,
+            "time_offset": 0.1,
+            "norm_x": 0.4775,
+            "norm_y": 0.6557,
+            "yaw_cmd": -0.0225,
+            "pitch_cmd": -0.1557
+        },
+        {
+            "step": 2,
+            "time_offset": 0.2,
+            "norm_x": 0.4809,
+            "norm_y": 0.6636,
+            "yaw_cmd": -0.0191,
+            "pitch_cmd": -0.1636
+        },
+        {
+            "step": 3,
+            "time_offset": 0.3,
+            "norm_x": 0.4844,
+            "norm_y": 0.6709,
+            "yaw_cmd": -0.0156,
+            "pitch_cmd": -0.1709
+        },
+        {
+            "step": 4,
+            "time_offset": 0.4,
+            "norm_x": 0.4879,
+            "norm_y": 0.6777,
+            "yaw_cmd": -0.0121,
+            "pitch_cmd": -0.1777
+        }
+    ]
+}
